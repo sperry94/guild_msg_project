@@ -12,7 +12,7 @@ export type SEOProps = {
   title?: string
 }
 
-export type SEOGraphQlQuery = {
+export type SEOGraphqlQuery = {
   site: {
     siteMetadata: {
       title: string
@@ -25,7 +25,7 @@ export type SEOGraphQlQuery = {
 function SEO(props: SEOProps) {
   const { title, lang = `en`, meta = [], description = `` } = props
 
-  const { site } = useStaticQuery<SEOGraphQlQuery>(
+  const { site } = useStaticQuery<SEOGraphqlQuery>(
     graphql`
       query {
         site {
