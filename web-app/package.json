@@ -17,14 +17,18 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "typescript": "^3.7.4",
+    "wait-on": "^3.3.0"
   },
   "devDependencies": {
+    "@bahmutov/add-typescript-to-cypress": "^2.1.2",
     "@types/jest": "^24.0.25",
     "@types/react-helmet": "^5.0.15",
     "@types/react-test-renderer": "^16.9.1",
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.2.27",
+    "cypress": "^3.8.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
@@ -41,8 +45,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "npm run test:unit",
-    "test:unit": "jest"
+    "test": "npm run test:unit && npm run test:cy",
+    "test:unit": "jest",
+    "test:cy": "npm run develop & wait-on http://localhost:8000 && cypress run",
+    "test:cy:open": "cypress open"
   },
   "repository": {
     "type": "git",
