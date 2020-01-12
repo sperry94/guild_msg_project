@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page renders when authenticated 1`] = `
+<div
+  className="makeStyles-mainInner-7"
+>
+  <header
+    className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorDefault mui-fixed MuiPaper-elevation4"
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+    >
+      <nav>
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+          href="/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <h1
+            className="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit"
+          >
+            Guild Chat
+          </h1>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <div
+    className="makeStyles-toolbarOffset-6"
+  />
+  <main
+    className="makeStyles-content-1"
+  >
+    <div
+      className="makeStyles-tagline-2"
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root makeStyles-messageIcon-3"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
+        />
+      </svg>
+      <div
+        className="makeStyles-textContent-4"
+      >
+        <h2
+          className="MuiTypography-root MuiTypography-h3"
+        >
+          Lightning-fast communication
+        </h2>
+        <p
+          className="MuiTypography-root MuiTypography-h5"
+        >
+          Connect with your friends at a moment's notice
+        </p>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <span
+              className="MuiTypography-root MuiTypography-h6"
+            >
+              Get started
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <div
+        className="MuiCardContent-root makeStyles-details-5"
+      >
+        <span>
+          Image 1
+        </span>
+        <span>
+          Image 2
+        </span>
+        <span>
+          Image 3
+        </span>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`Home Page renders when not authenticated 1`] = `
+<div
+  className="makeStyles-mainInner-7"
+>
+  <header
+    className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorDefault mui-fixed MuiPaper-elevation4"
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+    >
+      <nav>
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+          href="/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <h1
+            className="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit"
+          >
+            Guild Chat
+          </h1>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <div
+    className="makeStyles-toolbarOffset-6"
+  />
+  <main
+    className="makeStyles-content-1"
+  >
+    <div
+      className="makeStyles-tagline-2"
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root makeStyles-messageIcon-3"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
+        />
+      </svg>
+      <div
+        className="makeStyles-textContent-4"
+      >
+        <h2
+          className="MuiTypography-root MuiTypography-h3"
+        >
+          Lightning-fast communication
+        </h2>
+        <p
+          className="MuiTypography-root MuiTypography-h5"
+        >
+          Connect with your friends at a moment's notice
+        </p>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[MockFunction]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <span
+              className="MuiTypography-root MuiTypography-h6"
+            >
+              Sign in
+            </span>
+          </span>
+          <span
+            className="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <div
+        className="MuiCardContent-root makeStyles-details-5"
+      >
+        <span>
+          Image 1
+        </span>
+        <span>
+          Image 2
+        </span>
+        <span>
+          Image 3
+        </span>
+      </div>
+    </div>
+  </main>
+</div>
+`;

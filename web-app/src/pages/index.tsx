@@ -1,10 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 import { Button, Card, Typography, CardContent } from "@material-ui/core"
 import { Message } from "@material-ui/icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { signIn, useAuthContext } from "../services/auth"
 
 const useStyles = makeStyles({
   content: {
@@ -34,6 +35,8 @@ const useStyles = makeStyles({
 const IndexPage = () => {
   const classes = useStyles()
 
+  const auth = useAuthContext()
+
   return (
     <Layout classes={{ main: classes.content }}>
       <SEO title="Guild Chat" />
@@ -47,13 +50,12 @@ const IndexPage = () => {
             Connect with your friends at a moment's notice
           </Typography>
           <Button
-            component={Link}
-            to="/login"
             variant="contained"
             color="primary"
+            onClick={auth ? () => navigate("/messages") : signIn}
           >
             <Typography variant="h6" component="span">
-              Sign in
+              {auth ? "Get started" : "Sign in"}
             </Typography>
           </Button>
         </div>

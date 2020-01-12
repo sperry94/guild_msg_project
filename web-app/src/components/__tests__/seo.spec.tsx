@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery } from "gatsby"
 import renderer from "react-test-renderer"
-import SEO, { SEOGraphqlQuery } from "./seo"
+import SEO, { SEOGraphqlQuery } from "../seo"
 
 const mocked_useStaticQuery = useStaticQuery as jest.Mock<SEOGraphqlQuery>
 
