@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { signIn, useAuthContext } from "../services/auth"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   content: {
     padding: "0 24px",
   },
@@ -15,6 +15,11 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     margin: "15vh auto",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      textAlign: "center",
+      alignItems: "center",
+    },
   },
   messageIcon: {
     fontSize: "12em",
@@ -25,12 +30,18 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
     alignItems: "start",
     flexDirection: "column",
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "center",
+    },
   },
   details: {
     display: "flex",
     justifyContent: "space-around",
   },
-})
+  btn: {
+    marginTop: "24px",
+  },
+}))
 
 const IndexPage = () => {
   const classes = useStyles()
@@ -50,7 +61,12 @@ const IndexPage = () => {
             Connect with your friends at a moment's notice
           </Typography>
           {!auth && (
-            <Button variant="contained" color="primary" onClick={signIn}>
+            <Button
+              className={classes.btn}
+              variant="contained"
+              color="primary"
+              onClick={signIn}
+            >
               <Typography variant="h6" component="span">
                 Sign in
               </Typography>
@@ -58,6 +74,7 @@ const IndexPage = () => {
           )}
           {auth && (
             <Button
+              className={classes.btn}
               variant="contained"
               color="primary"
               component={Link}

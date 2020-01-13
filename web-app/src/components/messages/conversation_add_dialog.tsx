@@ -1,7 +1,8 @@
 import React from "react"
 import { Formik, Form } from "formik"
 import * as yup from "yup"
-import { makeStyles } from "@material-ui/core/styles"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   Button,
   Dialog,
@@ -14,9 +15,11 @@ import {
 } from "@material-ui/core"
 import { addConversation } from "../../services/conversations"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   dialog: {
-    minWidth: "600px",
+    [theme.breakpoints.up("md")]: {
+      minWidth: "600px",
+    },
   },
   input: {
     marginTop: "24px",
@@ -31,7 +34,7 @@ const useStyles = makeStyles({
   spinner: {
     color: "white",
   },
-})
+}))
 
 const validationSchema = yup.object({
   email: yup.string().required(),
@@ -48,8 +51,16 @@ const ConversationAddDialog = ({
 }: ConversationAddDialogProps) => {
   const classes = useStyles()
 
+  const theme = useTheme()
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"))
+
   return (
-    <Dialog open={open} onClose={onClose} classes={{ paper: classes.dialog }}>
+    <Dialog
+      open={open}
+      onClose={onClose}
+      classes={{ paper: classes.dialog }}
+      fullScreen={isSmall}
+    >
       <DialogTitle disableTypography>
         <Typography variant="h5" component="h2">
           Start a conversation
@@ -96,11 +107,6 @@ const ConversationAddDialog = ({
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                inputRef={el => {
-                  if (!el) return
-
-                  el.focus()
-                }}
               />
             </DialogContent>
             <DialogActions className={classes.inputActions}>

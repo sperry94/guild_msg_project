@@ -22,10 +22,11 @@ const useStyles = makeStyles({
 
 export type ConversationListProps = {
   conversationId?: string
+  onItemSelect?: () => void
 }
 
 const ConversationList = (props: ConversationListProps) => {
-  const { conversationId } = props
+  const { conversationId, onItemSelect = () => undefined } = props
 
   const classes = useStyles()
 
@@ -55,6 +56,7 @@ const ConversationList = (props: ConversationListProps) => {
             key={conversation.id}
             conversationId={conversationId}
             conversation={conversation}
+            onSelect={onItemSelect}
           />
         ))}
       </List>

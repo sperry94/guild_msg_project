@@ -5,11 +5,15 @@ import { makeStyles } from "@material-ui/core/styles"
 import { Paper, Typography } from "@material-ui/core"
 
 const useStyles = makeStyles(theme => ({
-  content: {
-    padding: "24px",
+  outerContent: {
+    display: "flex",
+    flexDirection: "column",
     "& + &": {
       marginTop: "48px",
     },
+  },
+  content: {
+    padding: "24px",
   },
   fromCurrentUser: {
     backgroundColor: theme.palette.primary.dark,
@@ -34,13 +38,13 @@ const Message = (props: MessageProps) => {
   const classes = useStyles()
 
   const style = {
-    textAlign: fromCurrentUser ? "right" : "left",
+    alignItems: fromCurrentUser ? ("end" as const) : ("start" as const),
     marginLeft: fromCurrentUser ? "auto" : "24px",
     marginRight: fromCurrentUser ? "24px" : "auto",
   }
 
   return (
-    <div style={style}>
+    <div className={classes.outerContent} style={style}>
       <Typography className={classes.time} variant="caption">
         {time.toDate().toLocaleString()}
       </Typography>

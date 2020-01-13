@@ -18,10 +18,11 @@ const useStyles = makeStyles({
 export type ConversationItemProps = {
   conversationId?: string
   conversation: Conversation
+  onSelect?: () => void
 }
 
 const ConversationItem = (props: ConversationItemProps) => {
-  const { conversationId, conversation } = props
+  const { conversationId, conversation, onSelect = () => undefined } = props
 
   const classes = useStyles()
 
@@ -34,6 +35,7 @@ const ConversationItem = (props: ConversationItemProps) => {
         divider
         component={Link}
         to={`/messages/${conversation.id}`}
+        onClick={onSelect}
       >
         {conversation.users.length > 0 && (
           <Avatar

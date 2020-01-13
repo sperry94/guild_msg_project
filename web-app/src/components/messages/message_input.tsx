@@ -96,11 +96,6 @@ const MessageInput = (props: MessageInputProps) => {
                 value={values.message}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                inputRef={el => {
-                  if (!el) return
-
-                  el.focus()
-                }}
               />
               <Button
                 disabled={disabled || isSubmitting || !values.message}
