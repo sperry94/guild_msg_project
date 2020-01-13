@@ -23,7 +23,9 @@ const useStyles = makeStyles(theme => ({
   },
   messageIcon: {
     fontSize: "12em",
-    marginRight: "24px",
+    [theme.breakpoints.up("md")]: {
+      marginRight: "24px",
+    },
   },
   textContent: {
     display: "flex",
