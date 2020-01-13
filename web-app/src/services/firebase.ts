@@ -1,6 +1,8 @@
 import * as firebase from "firebase/app"
 
 import "firebase/auth"
+import "firebase/firestore"
+import "firebase/functions"
 
 const firebaseConfig = {
   apiKey: "AIzaSyAFkLfldso4y5CJGj8BNCoAv9r7Ukacrow",
@@ -23,3 +25,13 @@ let innerFirebaseAuth: firebase.auth.Auth | undefined
 
 export const firebaseAuth = () =>
   innerFirebaseAuth || (innerFirebaseAuth = firebaseApp().auth())
+
+let innerFirestore: firebase.firestore.Firestore | undefined
+
+export const firestore = () =>
+  innerFirestore || (innerFirestore = firebaseApp().firestore())
+
+let innerFirebaseFunctions: firebase.functions.Functions | undefined
+
+export const firebaseFunctions = () =>
+  innerFirebaseFunctions || (innerFirebaseFunctions = firebaseApp().functions())

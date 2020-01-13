@@ -1,5 +1,5 @@
 import React from "react"
-import { navigate } from "gatsby"
+import { Link } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 import { Button, Card, Typography, CardContent } from "@material-ui/core"
 import { Message } from "@material-ui/icons"
@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   tagline: {
     display: "flex",
     justifyContent: "center",
-    margin: "10vh auto",
+    margin: "15vh auto",
   },
   messageIcon: {
     fontSize: "12em",
@@ -49,24 +49,27 @@ const IndexPage = () => {
           <Typography variant="h5" component="p">
             Connect with your friends at a moment's notice
           </Typography>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={auth ? () => navigate("/messages") : signIn}
-          >
-            <Typography variant="h6" component="span">
-              {auth ? "Get started" : "Sign in"}
-            </Typography>
-          </Button>
+          {!auth && (
+            <Button variant="contained" color="primary" onClick={signIn}>
+              <Typography variant="h6" component="span">
+                Sign in
+              </Typography>
+            </Button>
+          )}
+          {auth && (
+            <Button
+              variant="contained"
+              color="primary"
+              component={Link}
+              to="/messages"
+            >
+              <Typography variant="h6" component="span">
+                Get started
+              </Typography>
+            </Button>
+          )}
         </div>
       </div>
-      <Card>
-        <CardContent className={classes.details}>
-          <span>Image 1</span>
-          <span>Image 2</span>
-          <span>Image 3</span>
-        </CardContent>
-      </Card>
     </Layout>
   )
 }

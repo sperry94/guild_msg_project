@@ -2,6 +2,8 @@ import React from "react"
 import Toolbar from "./toolbar"
 import { makeStyles } from "@material-ui/core/styles"
 
+import "./global.css"
+
 const useStyles = makeStyles(theme => ({
   toolbarOffset: {
     ...theme.mixins.toolbar,

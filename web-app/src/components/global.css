@@ -1,0 +1,15 @@
+* {
+  scrollbar-color: #777 #212121;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #212121;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #777;
+}
+
+body {
+  background-color: #303030;
+}
