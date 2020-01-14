@@ -21,6 +21,8 @@ Author: Seth Perry
   - This would be a simple feature addition due to some abstractions I made
 - Would have liked to test the cloud functions/database rules more thoroughly
 - Would have liked to have an infinite scroll (or other similar function) to prevent loading all messages for a conversation
+- Would have liked to show a spinner before determining auth status
+- Would have liked to surface PWA functionality better/optimized for that use case (eg: storing messages for offline access)
 
 ## Front-End Technical Decisions
 
