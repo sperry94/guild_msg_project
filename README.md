@@ -7,10 +7,11 @@ Author: Seth Perry
 - Log in with Google
 - Add other users by email
 - Send messages in multiple conversations
+- Responsive design
 
 ## Limitations
 
-- Would have liked to do more E2E testing in cypress
+- Would have liked to do E2E testing in cypress
 - Need to approach the security of user info in a different way
   - Would need to find a better approach to ensuring that users can see the info for users they start conversations with, but can't query the DB for all user info
   - Need to stop users add tons of conversations to effectively get user info, maybe a conversation "accept" pattern that prevents data from being shared with malicious actors
