@@ -1,4 +1,4 @@
-# Guild Engineering Application Project
+# Guild Message Project
 
 Author: Seth Perry
 
