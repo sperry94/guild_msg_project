@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - uses: jakejarvis/firebase-deploy-action@v.0.1.0
+      - uses: jakejarvis/firebase-deploy-action@v0.1.0
         env:
           FIREBASE_PROJECT_ID: guild-msg-project
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
