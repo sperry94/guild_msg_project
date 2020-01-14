@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message renders for case #1 1`] = `
+<div
+  className="makeStyles-outerContent-1 makeStyles-outerFromCurrentUser-3"
+>
+  <span
+    className="MuiTypography-root makeStyles-time-7 makeStyles-timeFromCurrentUser-8 MuiTypography-caption"
+  >
+    2/28/2001, 12:02:05 PM
+  </span>
+  <div
+    className="MuiPaper-root makeStyles-content-2 makeStyles-fromCurrentUser-5 MuiPaper-elevation3 MuiPaper-rounded"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    >
+      My message
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Message renders for case #2 1`] = `
+<div
+  className="makeStyles-outerContent-1 makeStyles-outerFromOtherUser-4"
+>
+  <span
+    className="MuiTypography-root makeStyles-time-7 makeStyles-timeFromOtherUser-9 MuiTypography-caption"
+  >
+    9/13/2019, 3:05:12 AM
+  </span>
+  <div
+    className="MuiPaper-root makeStyles-content-2 makeStyles-fromOtherUser-6 MuiPaper-elevation3 MuiPaper-rounded"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    >
+      My message #2
+    </p>
+  </div>
+</div>
+`;

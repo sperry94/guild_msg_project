@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders with classes 1`] = `
+<div
+  className="makeStyles-mainInner-1"
+>
+  <header
+    className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed makeStyles-appBar-2 MuiAppBar-colorDefault mui-fixed MuiPaper-elevation4"
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular makeStyles-header-3 MuiToolbar-gutters"
+    >
+      <nav
+        className="makeStyles-nav-4"
+      >
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+          href="/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <h1
+            className="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit"
+          >
+            Guild Chat
+          </h1>
+        </a>
+      </nav>
+      <div />
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Log In
+        </span>
+      </button>
+    </div>
+  </header>
+  <main
+    className="my-class"
+  >
+    <div>
+      Hello
+    </div>
+  </main>
+</div>
+`;
+
+exports[`Layout renders without classes 1`] = `
+<div
+  className="makeStyles-mainInner-1"
+>
+  <header
+    className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed makeStyles-appBar-2 MuiAppBar-colorDefault mui-fixed MuiPaper-elevation4"
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular makeStyles-header-3 MuiToolbar-gutters"
+    >
+      <nav
+        className="makeStyles-nav-4"
+      >
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+          href="/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <h1
+            className="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit"
+          >
+            Guild Chat
+          </h1>
+        </a>
+      </nav>
+      <div />
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Log In
+        </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </header>
+  <main>
+    <div>
+      Hello there
+    </div>
+  </main>
+</div>
+`;

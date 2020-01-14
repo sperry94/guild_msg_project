@@ -11,9 +11,27 @@ const useStyles = makeStyles(theme => ({
     "& + &": {
       marginTop: "48px",
     },
+    maxWidth: "calc(100% - 48px)",
   },
   content: {
     padding: "24px",
+    flex: 0,
+  },
+  outerFromCurrentUser: {
+    alignItems: "end",
+    marginLeft: "auto",
+    marginRight: "24px",
+    [theme.breakpoints.down("sm")]: {
+      marginRight: "0px",
+    },
+  },
+  outerFromOtherUser: {
+    alignItems: "start",
+    marginRight: "auto",
+    marginLeft: "24px",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "0px",
+    },
   },
   fromCurrentUser: {
     backgroundColor: theme.palette.primary.dark,
@@ -22,13 +40,20 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.secondary.dark,
   },
   time: {
+    width: "100%",
     color: theme.palette.grey[400],
+  },
+  timeFromCurrentUser: {
+    textAlign: "right",
+  },
+  timeFromOtherUser: {
+    textAlign: "left",
   },
 }))
 
 export type MessageProps = {
   fromCurrentUser: boolean
-  time: firestore.Timestamp
+  time: Date
   message: string
 }
 
@@ -37,16 +62,21 @@ const Message = (props: MessageProps) => {
 
   const classes = useStyles()
 
-  const style = {
-    alignItems: fromCurrentUser ? ("end" as const) : ("start" as const),
-    marginLeft: fromCurrentUser ? "auto" : "24px",
-    marginRight: fromCurrentUser ? "24px" : "auto",
-  }
-
   return (
-    <div className={classes.outerContent} style={style}>
-      <Typography className={classes.time} variant="caption">
-        {time.toDate().toLocaleString()}
+    <div
+      className={cn(classes.outerContent, {
+        [classes.outerFromCurrentUser]: fromCurrentUser,
+        [classes.outerFromOtherUser]: !fromCurrentUser,
+      })}
+    >
+      <Typography
+        className={cn(classes.time, {
+          [classes.timeFromCurrentUser]: fromCurrentUser,
+          [classes.timeFromOtherUser]: !fromCurrentUser,
+        })}
+        variant="caption"
+      >
+        {time.toLocaleString()}
       </Typography>
       <Paper
         className={cn(classes.content, {

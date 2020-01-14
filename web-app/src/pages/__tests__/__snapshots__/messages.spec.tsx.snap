@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessagesViewer renders with auth 1`] = `
+<div
+  className="makeStyles-mainInner-4"
+>
+  <header
+    className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed makeStyles-appBar-5 MuiAppBar-colorDefault mui-fixed MuiPaper-elevation4"
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular makeStyles-header-6 MuiToolbar-gutters"
+    >
+      <nav
+        className="makeStyles-nav-7"
+      >
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+          href="/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <h1
+            className="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit"
+          >
+            Guild Chat
+          </h1>
+        </a>
+      </nav>
+      <div />
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Log In
+        </span>
+      </button>
+    </div>
+  </header>
+  <main
+    className=""
+  >
+    <div
+      role="group"
+      style={
+        Object {
+          "outline": "none",
+        }
+      }
+      tabIndex="-1"
+    >
+      <div
+        className="makeStyles-content-117"
+      >
+        <div
+          className="MuiDrawer-root MuiDrawer-docked makeStyles-drawer-120"
+        >
+          <div
+            className="MuiPaper-root MuiDrawer-paper makeStyles-drawerPaper-121 MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft MuiPaper-elevation0"
+            style={
+              Object {
+                "visibility": undefined,
+              }
+            }
+          >
+            <div
+              className="makeStyles-toolbarOffset-119"
+            />
+            <div
+              className="MuiCircularProgress-root makeStyles-spinner-138 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+              role="progressbar"
+              style={
+                Object {
+                  "height": 40,
+                  "width": 40,
+                }
+              }
+            >
+              <svg
+                className="MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                  cx={44}
+                  cy={44}
+                  fill="none"
+                  r={20.2}
+                  strokeWidth={3.6}
+                  style={Object {}}
+                />
+              </svg>
+            </div>
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-addNewBtn-122"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              <span
+                className="MuiButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                  />
+                </svg>
+                <p
+                  className="MuiTypography-root MuiTypography-body1"
+                >
+                  New Conversation
+                </p>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          className="makeStyles-activeConversation-118 makeStyles-content-179"
+        >
+          <div
+            className="MuiPaper-root makeStyles-content-184 MuiPaper-elevation5"
+          >
+            <form
+              action="#"
+              className="makeStyles-form-185"
+              onReset={[Function]}
+              onSubmit={[Function]}
+            >
+              <div
+                className="MuiFormControl-root MuiTextField-root makeStyles-input-186"
+              >
+                <div
+                  className="MuiInputBase-root MuiOutlinedInput-root Mui-disabled Mui-disabled MuiInputBase-formControl"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    aria-label="Message"
+                    autoFocus={true}
+                    className="MuiInputBase-input MuiOutlinedInput-input Mui-disabled Mui-disabled"
+                    disabled={true}
+                    name="message"
+                    onAnimationStart={[Function]}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={false}
+                    type="text"
+                    value=""
+                  />
+                  <fieldset
+                    aria-hidden={true}
+                    className="PrivateNotchedOutline-root-228 MuiOutlinedInput-notchedOutline"
+                    style={
+                      Object {
+                        "paddingLeft": 8,
+                      }
+                    }
+                  >
+                    <legend
+                      className="PrivateNotchedOutline-legend-229"
+                      style={
+                        Object {
+                          "width": 0.01,
+                        }
+                      }
+                    >
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "&#8203;",
+                          }
+                        }
+                      />
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+              <button
+                className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled Mui-disabled"
+                disabled={true}
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={-1}
+                type="submit"
+              >
+                <span
+                  className="MuiButton-label"
+                >
+                  Send
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`MessagesViewer renders without auth 1`] = `
+<div
+  className="makeStyles-mainInner-4"
+>
+  <header
+    className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed makeStyles-appBar-5 MuiAppBar-colorDefault mui-fixed MuiPaper-elevation4"
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular makeStyles-header-6 MuiToolbar-gutters"
+    >
+      <nav
+        className="makeStyles-nav-7"
+      >
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+          href="/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <h1
+            className="MuiTypography-root MuiTypography-h6 MuiTypography-colorInherit"
+          >
+            Guild Chat
+          </h1>
+        </a>
+      </nav>
+      <div />
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Log In
+        </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </header>
+  <main
+    className="makeStyles-unAuthenticatedMain-2"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-h5"
+    >
+      You must be logged in to view your messages.
+    </p>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[MockFunction]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        <span
+          className="MuiTypography-root MuiTypography-h6"
+        >
+          Sign in
+        </span>
+      </span>
+      <span
+        className="MuiTouchRipple-root"
+      />
+    </button>
+  </main>
+</div>
+`;

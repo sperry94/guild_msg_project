@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
-import { Button, Card, Typography, CardContent } from "@material-ui/core"
+import { Button, Typography } from "@material-ui/core"
 import { Message } from "@material-ui/icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -65,6 +65,7 @@ const IndexPage = () => {
           {!auth && (
             <Button
               className={classes.btn}
+              data-testid="signin-btn"
               variant="contained"
               color="primary"
               onClick={signIn}
@@ -77,6 +78,7 @@ const IndexPage = () => {
           {auth && (
             <Button
               className={classes.btn}
+              data-testid="getstarted-btn"
               variant="contained"
               color="primary"
               component={Link}

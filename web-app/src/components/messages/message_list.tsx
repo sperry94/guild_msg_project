@@ -9,6 +9,7 @@ const useStyles = makeStyles({
   content: {
     height: "calc(100% - 72px)",
     overflowY: "auto",
+    "-webkit-overflow-scrolling": "touch",
   },
   innerContent: {
     display: "flex",

@@ -8,6 +8,7 @@ const useStyles = makeStyles({
   nav: {
     height: "calc(100% - 136px)",
     overflowY: "auto",
+    "-webkit-overflow-scrolling": "touch",
   },
   noConversationText: {
     textAlign: "center",

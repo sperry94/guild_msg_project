@@ -3,7 +3,7 @@ import { firestore as innerFirestore } from "firebase/app"
 import { firestore, firebaseAuth } from "./firebase"
 
 export type Message = {
-  time: innerFirestore.Timestamp
+  time: Date
   senderId: string
   message: string
 }
@@ -22,10 +22,15 @@ export const useMessages = (conversationId?: string) => {
       .doc(conversationId)
       .collection("messages")
       .orderBy("time")
-      .limitToLast(50)
       .onSnapshot(
         snap => {
-          setMessages(snap.docs.map(doc => doc.data() as Message))
+          setMessages(
+            snap.docs.map(doc => {
+              const docData = doc.data()
+              docData.time = docData.time.toDate()
+              return docData as Message
+            })
+          )
         },
         err => {
           console.error("An error occurred reading the conversation data", err)

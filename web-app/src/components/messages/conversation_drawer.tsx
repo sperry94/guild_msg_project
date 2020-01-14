@@ -37,6 +37,7 @@ const useStyles = makeStyles(theme => ({
   backBtn: {
     position: "absolute",
     zIndex: 4,
+    backgroundColor: theme.palette.grey[900],
   },
 }))
 

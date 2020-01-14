@@ -13,9 +13,11 @@ import { signIn, signOut, useAuthContext } from "../services/auth"
 const useStyles = makeStyles({
   appBar: {
     zIndex: 3,
+    height: "64px",
   },
   header: {
     display: "flex",
+    height: "64px",
   },
   nav: {
     flexGrow: 1,
@@ -47,7 +49,7 @@ const Toolbar = () => {
               color="inherit"
               underline="none"
             >
-              <Typography component="h1" variant="body1" color="inherit">
+              <Typography variant="body1" color="inherit">
                 My Messages
               </Typography>
             </MuiLink>
