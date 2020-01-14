@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import { CircularProgress, List, Typography } from "@material-ui/core"
 import { useConversationList } from "../../services/conversations"
@@ -34,11 +34,15 @@ const ConversationList = (props: ConversationListProps) => {
 
   const { enqueueSnackbar } = useSnackbar()
 
-  const conversations = useConversationList(msg =>
-    enqueueSnackbar(msg, {
-      variant: "error",
-    })
+  const errCb = useCallback(
+    msg =>
+      enqueueSnackbar(msg, {
+        variant: "error",
+      }),
+    [enqueueSnackbar]
   )
+
+  const conversations = useConversationList(errCb)
 
   if (!conversations) {
     return <CircularProgress className={classes.spinner} />

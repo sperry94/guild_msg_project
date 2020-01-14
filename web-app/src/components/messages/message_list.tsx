@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react"
+import React, { useLayoutEffect, useRef, useCallback } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import { CircularProgress, Typography } from "@material-ui/core"
 import { useAuthContext } from "../../services/auth"
@@ -46,11 +46,15 @@ const MessageList = (props: MessageListProps) => {
 
   const auth = useAuthContext()
 
-  const messages = useMessages(conversationId, msg =>
-    enqueueSnackbar(msg, {
-      variant: "error",
-    })
+  const errCb = useCallback(
+    msg =>
+      enqueueSnackbar(msg, {
+        variant: "error",
+      }),
+    [enqueueSnackbar]
   )
+
+  const messages = useMessages(conversationId, errCb)
 
   useLayoutEffect(() => {
     if (!messages || !listRef.current) return
