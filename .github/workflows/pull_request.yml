@@ -10,4 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run unit tests
-      run: yarn test=
+      run: npm --prefix "web-app" run test
