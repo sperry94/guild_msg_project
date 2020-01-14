@@ -3,11 +3,14 @@ name: PR Check
 on: [pull_request]
 
 jobs:
-  build:
-
+  check:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Run unit tests
-      run: npm --prefix "web-app" run test
+      - uses: actions/checkout@v1
+      - name: Run npm install
+        run: npm --prefix "web-app" install
+      - name: Run unit tests
+        run: npm --prefix "web-app" run test
+      - name: Build web app
+        run: npm --prefix "web-app" run build

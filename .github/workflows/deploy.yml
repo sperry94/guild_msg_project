@@ -1,0 +1,19 @@
+name: Deploy to Firebase
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - uses: jakejarvis/firebase-deploy-action@v.0.1.0
+        env:
+          FIREBASE_PROJECT_ID: guild-msg-project
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        with:
+          args: -f
