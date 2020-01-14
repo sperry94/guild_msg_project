@@ -2,13 +2,24 @@
 
 Author: Seth Perry
 
-## Project Overview
-
-TBW
-
 ## Feature List
 
-TBD
+- Log in with Google
+- Add other users by email
+- Send messages in multiple conversations
+
+## Limitations
+
+- Would have liked to do more E2E testing in cypress
+- Need to approach the security of user info in a different way
+  - Would need to find a better approach to ensuring that users can see the info for users they start conversations with, but can't query the DB for all user info
+  - Need to stop users add tons of conversations to effectively get user info, maybe a conversation "accept" pattern that prevents data from being shared with malicious actors
+- Would have liked to add notifications
+- Would have liked to add online/offline status
+- Only one-on-one conversations are possible
+  - This would be a simple feature addition due to some abstractions I made
+- Would have liked to test the cloud functions/database rules more thoroughly
+- Would have liked to have an infinite scroll (or other similar function) to prevent loading all messages for a conversation
 
 ## Front-End Technical Decisions
 
@@ -63,4 +74,4 @@ I chose the Firebase platform because I have some experience with it and it prov
 3. Download the Git Repo and unpackage it.
 4. Run `npm install` or `yarn install`.
 5. Run `npm run serve` or `yarn develop`.
-6. Open a browser to `https://`
+6. Open a browser to `https://localhost:8000`
