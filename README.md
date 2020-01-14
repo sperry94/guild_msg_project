@@ -23,6 +23,8 @@ Author: Seth Perry
 - Would have liked to have an infinite scroll (or other similar function) to prevent loading all messages for a conversation
 - Would have liked to show a spinner before determining auth status
 - Would have liked to surface PWA functionality better/optimized for that use case (eg: storing messages for offline access)
+- The DB security for messages was causing a lot of reads, which hit the free tier quota.
+  - Would need to restructure the data a little bit to resolve this and be able to protect the messages
 
 ## Front-End Technical Decisions
 

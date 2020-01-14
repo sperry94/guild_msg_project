@@ -5,13 +5,13 @@ service cloud.firestore {
       allow write: if false;
       allow read: if request.auth.uid != null;
     }
-    match /conversations/{conversation}/messages/{document=**} {
-    	allow create, delete: if false;
-    	allow read, update: if request.auth.uid != null && request.auth.uid in get(/databases/$(database)/documents/conversations/$(conversation)).data.users;
-    }
-    match /conversations/{document=**} {
+    match /conversations/{conversation} {
     	allow create, delete: if false;
     	allow read, update: if request.auth.uid != null && request.auth.uid in resource.data.users;
+      
+      match /messages/{message} {
+      	allow read, write: if true;
+      }
     }
   }
 }
