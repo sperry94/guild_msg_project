@@ -4,7 +4,7 @@ Author: Seth Perry
 
 ## Feature List
 
-- Log in with Google
+- Log in with Googleasdas
 - Add other users by email
 - Send messages in multiple conversations
 - Responsive design
