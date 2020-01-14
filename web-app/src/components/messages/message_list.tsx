@@ -4,6 +4,7 @@ import { CircularProgress, Typography } from "@material-ui/core"
 import { useAuthContext } from "../../services/auth"
 import { useMessages } from "../../services/messages"
 import Message from "./message"
+import { useSnackbar } from "notistack"
 
 const useStyles = makeStyles({
   content: {
@@ -41,9 +42,15 @@ const MessageList = (props: MessageListProps) => {
 
   const classes = useStyles()
 
+  const { enqueueSnackbar } = useSnackbar()
+
   const auth = useAuthContext()
 
-  const messages = useMessages(conversationId)
+  const messages = useMessages(conversationId, msg =>
+    enqueueSnackbar(msg, {
+      variant: "error",
+    })
+  )
 
   useLayoutEffect(() => {
     if (!messages || !listRef.current) return

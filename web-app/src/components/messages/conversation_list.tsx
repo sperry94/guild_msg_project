@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import { CircularProgress, List, Typography } from "@material-ui/core"
 import { useConversationList } from "../../services/conversations"
 import ConversationItem from "./conversation_item"
+import { useSnackbar } from "notistack"
 
 const useStyles = makeStyles({
   nav: {
@@ -31,7 +32,13 @@ const ConversationList = (props: ConversationListProps) => {
 
   const classes = useStyles()
 
-  const conversations = useConversationList()
+  const { enqueueSnackbar } = useSnackbar()
+
+  const conversations = useConversationList(msg =>
+    enqueueSnackbar(msg, {
+      variant: "error",
+    })
+  )
 
   if (!conversations) {
     return <CircularProgress className={classes.spinner} />

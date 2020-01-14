@@ -8,7 +8,10 @@ export type Message = {
   message: string
 }
 
-export const useMessages = (conversationId?: string) => {
+export const useMessages = (
+  conversationId?: string,
+  errCb: (msg: string) => void = () => undefined
+) => {
   const [messages, setMessages] = useState<Message[] | null>(null)
 
   useEffect(() => {
@@ -34,10 +37,11 @@ export const useMessages = (conversationId?: string) => {
         },
         err => {
           console.error("An error occurred reading the conversation data", err)
+          errCb("An error occurred reading the conversation data")
           setMessages([])
         }
       )
-  }, [conversationId])
+  }, [conversationId, errCb])
 
   return messages
 }

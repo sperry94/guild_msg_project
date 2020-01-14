@@ -1,5 +1,6 @@
 import React from "react"
 import { Formik, Form } from "formik"
+import { useSnackbar } from "notistack"
 import * as yup from "yup"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
@@ -51,6 +52,8 @@ const ConversationAddDialog = ({
 }: ConversationAddDialogProps) => {
   const classes = useStyles()
 
+  const { enqueueSnackbar } = useSnackbar()
+
   const theme = useTheme()
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"))
 
@@ -80,6 +83,13 @@ const ConversationAddDialog = ({
             console.error(
               `An error occurred trying to create the conversation`,
               err
+            )
+            enqueueSnackbar(
+              err?.message ||
+                `An error occurred trying to create the conversation`,
+              {
+                variant: "error",
+              }
             )
           }
           helpers.setSubmitting(false)
