@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState, useLayoutEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import { Formik, Form } from "formik"
+import { useSnackbar } from "notistack"
 import * as yup from "yup"
 import { makeStyles } from "@material-ui/core/styles"
 import { Button, CircularProgress, Paper, TextField } from "@material-ui/core"
@@ -48,6 +49,8 @@ const MessageInput = (props: MessageInputProps) => {
 
   const classes = useStyles()
 
+  const { enqueueSnackbar } = useSnackbar()
+
   const resetFormRef = useRef<null | (() => void)>(null)
 
   useEffect(() => {
@@ -71,6 +74,9 @@ const MessageInput = (props: MessageInputProps) => {
             await sendMessage(conversationId, val.message)
           } catch (err) {
             console.error(`An error occurred trying to send the message`, err)
+            enqueueSnackbar(`An error occurred trying to send the message`, {
+              variant: "error",
+            })
             helpers.setFieldValue("message", val.message)
           }
 

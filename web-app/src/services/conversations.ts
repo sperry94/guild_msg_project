@@ -21,7 +21,9 @@ export type Conversation = {
 
 const cachedUserData: { [k: string]: User } = {}
 
-export const useConversationList = () => {
+export const useConversationList = (
+  errCb: (msg: string) => void = () => undefined
+) => {
   const [conversations, setConversations] = useState<Conversation[] | null>(
     null
   )
@@ -85,10 +87,14 @@ export const useConversationList = () => {
             "An error occurred reading the conversations for the current user",
             err
           )
+          errCb(
+            err?.message ||
+              "An error occurred reading the conversations for the current user"
+          )
           setConversations([])
         }
       )
-  }, [auth])
+  }, [auth, errCb])
 
   return conversations
 }
